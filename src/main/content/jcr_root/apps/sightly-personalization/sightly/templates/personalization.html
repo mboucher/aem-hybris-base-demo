@@ -1,0 +1,55 @@
+<template data-sly-template.profileProperty="${ @ propertyName, store, prefix, suffix}"
+    data-sly-use.util="/apps/sightly-personalization/sightly/templates/util.js">
+    <span id="${util.id}"></span>
+    <script type="text/javascript">
+    if (window.CQ_Analytics) {
+        CQ_Analytics.ClientContextUtils.renderStoreProperty('${util.id @ context="scriptString"}', '${store @ context="scriptString"}', '${propertyName @ context="scriptString"}', '${prefix @ context="scriptString"}', '${suffix @ context="scriptString"}');
+    }
+    </script>
+</template>
+
+<template data-sly-template.profileLink="${ @ id, displayValue, displayValuePropertyName, store, href, prefix, suffix}"
+    data-sly-use.property="${'/apps/sightly-personalization/sightly/templates/property.js' @ displayValue=displayValue, displayValuePropertyName=displayValuePropertyName}">
+    <a id="${id}">${prefix}${property.value}${suffix}</a>
+    <script type="text/javascript">
+        $CQ(function() {
+            if( window.CQ_Analytics && CQ_Analytics.CCM) {
+                CQ_Analytics.ClientContextUtils.onStoreRegistered('${store @ context="scriptString"}', function(store) {
+                    var renderer = function() {
+                        var displayValuePropertyName = '${displayValuePropertyName @ context="scriptString"}';
+                        var linkHref = '${href @ context="scriptString"}';
+                        var linkValue = '${property.value @ context="scriptString"}';
+                        var p = store.getData();
+                        if (p) {
+                            linkHref = linkHref.replace(/\$\{profile\.path\}/g, p['path']);
+                            if (displayValuePropertyName) {
+                                linkValue = store.getProperty(displayValuePropertyName) || '';
+                            }
+                        }
+                        var link = document.getElementById('${id @ context="scriptString"}');
+                        if(store.getProperty("formattedName",true).toLowerCase().indexOf("anonymous") > -1) {
+                            link.innerHTML="";
+                            link.href="";
+                            link.style.visibility="hidden";
+                        } else {
+                            linkValue = '${prefix @ context="scriptString"}' + linkValue + '${suffix @ context="scriptString"}'
+                            
+                            if (link && link.href != linkHref) {
+                                link.href = '${request.contextPath @ context="scriptString"}' + linkHref;
+                            }
+                            if (link && link.innerHTML != linkValue) {
+                                link.innerHTML = linkValue;
+                            }
+                            link.style.visibility="visible";
+                        }
+                    };
+                    renderer();
+                    store.addListener('update', function() {
+                        renderer();
+                    });
+                });
+            }
+        });
+    </script>
+
+</template>

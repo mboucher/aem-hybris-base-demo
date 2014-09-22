@@ -1,0 +1,6 @@
+<div class="logo" data-sly-resource="${ @path='site-logo', resourceType='wcm/foundation/components/image'}"></div>
+<ul data-sly-list="${currentPage.listChildren}">
+    <li>
+        <a href="${item.path}.html" data-sly-text="${item.title}">This is the first menu item</a>
+    </li>
+</ul>

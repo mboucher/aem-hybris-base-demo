@@ -1,0 +1,154 @@
+/* Page header styles */
+header {
+    display: block;
+}
+.page-systemnav, .page-sitenav {
+    overflow: hidden;
+    height: 150px;
+    padding: 5px 10px 6px;
+    font-size: 11px;
+    color: #bababa;
+    background: none repeat scroll 0 0 #0051AA;
+}
+.page-systemnav {
+    background: none repeat scroll 0 0 #4d4d4d;
+    height: 16px;
+}
+
+.sys-nav-wrapper, .page-nav-wrapper{
+	width: 966px;
+    margin: 0 auto;
+}
+
+.page-systemnav a {
+    color: #bababa;
+    text-decoration: none;
+}
+.page-systemnav a:hover {
+    color: #eee;
+}
+
+.page-systemnav .userinfo {
+    float: right;
+    padding-right: 10px
+}
+.page-systemnav .search {
+    float: right;
+}
+
+/* For a nicer design mode experience */
+.page-systemnav .cq-editcomponent-placeholder {
+    float: left !important;
+    margin: -6px 0 0 -10px !important;
+}
+
+nav ul, nav ol { 
+    list-style: none; 
+    list-style-image: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.userinfo ul {
+    overflow: hidden;
+}
+.userinfo li {
+    float: left;
+    padding: 0 5px;
+}
+.userinfo a,
+.userinfo span {
+    float: left;
+    height: 12px;
+    line-hight: 12px;
+    padding: 2px 5px;
+}
+
+/* Shopping Cart styles */
+
+#cq-hovercart {
+  padding-top: 20px;
+  max-width: 500px;
+  min-width: 300px;
+}
+#cq-hovercart > div.cq-hovercart-border {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 2px #000000;
+  -webkit-box-shadow: 0 0 15px 2px #000000;
+  -moz-box-shadow: 0 0 15px 2px #000000;
+  background-color: #ed692b;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ed692b), to(#d45e26));
+  background-image: -webkit-linear-gradient(top, #ed692b, #d45e26);
+  background-image: -moz-linear-gradient(top, #ed692b, #d45e26);
+  background-image: -ms-linear-gradient(top, #ed692b, #d45e26);
+  background-image: -o-linear-gradient(top, #ed692b, #d45e26);
+  padding: 5px;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner {
+  background-color: #dbdcdd;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dbdcdd), to(#fcfcfc));
+  background-image: -webkit-linear-gradient(top, #dbdcdd, #fcfcfc);
+  background-image: -moz-linear-gradient(top, #dbdcdd, #fcfcfc);
+  background-image: -ms-linear-gradient(top, #dbdcdd, #fcfcfc);
+  background-image: -o-linear-gradient(top, #dbdcdd, #fcfcfc);
+  padding: 10px;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner > h1 {
+  float: left;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner > a.cq-hovercart-checkout {
+  float: right;
+  font-weight: bold;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner > table {
+  width: 100%;
+  clear: both;
+  border-style: none;
+  border-collapse: collapse;
+  position: relative;
+  top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #cacaca;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner > table > tbody > tr {
+  cursor: pointer;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner > table > tbody > tr > td {
+  padding: 3px 0 3px 0;
+  vertical-align: middle;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner > table > tbody > tr > td.cq-hovercart-quantity,
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner > table > tbody > tr > td.cq-hovercart-price {
+  text-align: right;
+  padding-left: 5px;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner > table > tbody > tr > td.cq-hovercart-thumb {
+  width: 32px;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner > table > tbody > tr > td.cq-hovercart-thumb img {
+  position: relative;
+  left: -6px;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner > table > tbody > tr:hover > td > a {
+  text-decoration: underline;
+}
+#cq-hovercart > div.cq-hovercart-border > div.cq-hovercart-inner .cq-hovercart-promotion {
+  padding-top: 8px;
+  border-top: 1px solid #cacaca;
+  font-size: 12px;
+  color: #4C4C4C;
+}
+#cq-hovercart a {
+  color: #ed692b;
+  text-decoration: none;
+}
+#cq-hovercart a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,53 @@
+.topnav ul {
+    padding-top: 40px;
+    float: right;
+}
+.topnav .logo {
+    float: left;
+    width: 30%;   
+}
+.nav-wrapper{	
+	overflow: hidden;
+    padding: 0 0 32px;
+    width: 966px;
+    margin: 0 auto;
+}
+.nav-wrapper.large {
+	width: 1050px;
+}
+
+.topnav a,
+.topnav a:visited {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    -moz-transition: background 1s;
+    -webkit-transition: background 1s;
+    -o-transition: background 1s;
+    /* transition: background 1s; not supported with IE -> ugly effect */
+}
+.topnav a:hover {
+    color: #000;
+    background-color: #59b9ff;
+    -moz-transition: background 200ms;
+    -webkit-transition: background 200ms;
+    -o-transition: background 200ms;
+    /* transition: background 200ms; not supported with IE -> ugly effect */
+}
+
+/* The pages */
+
+.topnav li {
+    float: left;
+    height: 70px;
+    margin-bottom: 10px;
+    border-left: #bebebe 1px solid;
+}
+.topnav li a {
+    color: #fff;
+    width: 100px;
+    height: 15px;
+    line-height: 15px;
+    padding: 54px 0 11px 5px;
+    text-transform: uppercase;
+}

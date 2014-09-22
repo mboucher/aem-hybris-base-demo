@@ -1,0 +1,5 @@
+<form data-sly-use.search="search.js" class="search-form" action="${search.formAction}" method="get">
+        <label for="search-field" style="display: none">Search: </label>
+        <input  type="text" name="${search.paramQueryText}" placeholder="${search.placeholderText}" value="${search.searchQuery}" id="search-field"/>
+        <input class="button" type="submit" />
+</form>

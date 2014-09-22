@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+<head data-sly-include="head.html" data-sly-unwrap/>
+	<body>
+        
+        <!--/* Required Client Context Component */-->
+        <div data-sly-resource="${@path='clientcontext', resourceType='cq/personalization/components/clientcontext'}"/>
+
+        <!--/* Page Header */-->
+        <header id="header" data-sly-include="header.html"></header>
+        
+        <!--/* Paragraph System */-->
+        <div class="page-content">
+            <div id="parsys" data-sly-resource="${ @path='par', resourceType='foundation/components/parsys'}"></div>
+        </div>
+
+        <!--/* Page footer */-->
+        <footer id="footer" data-sly-include="footer.html"></footer>
+         
+        <!--/* AEM System includes */-->
+        <div data-sly-resource="${ @path='timing', resourceType='foundation/components/timing'}"></div>
+        <div data-sly-resource="${ @path='cloudservices', resourceType='cq/cloudserviceconfigs/components/servicecomponents'}"></div>
+        
+       
+	</body>
+</html>

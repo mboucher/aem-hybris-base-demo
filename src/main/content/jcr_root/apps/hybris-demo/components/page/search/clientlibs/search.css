@@ -1,0 +1,45 @@
+.userinfo .search {
+	padding: 0 0 0 15px;
+	height: auto
+	border-radius: 0;
+	border-bottom: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	background-color: transparent;
+	position: relative;
+	float: left;
+	height:20px;
+}
+
+.search input#search-field {
+	width: 180px;
+	color: #fff;
+	font-size: 12px;
+	padding: 0 10px;
+	height: 20px;
+	line-height:14px;
+	border:0;
+	background: url(/etc/designs/hybris-demo/images/page/search.png) 0 0 repeat-x transparent;
+	transition: width 0.4s;
+	-moz-transition: width 0.4s;
+	-webkit-transition: width 0.4s;
+}
+
+.search input#search-field:focus {
+	outline:0;
+	background: url(/etc/designs/hybris-demo/images/page/search-focus.png) 0 0 repeat-x transparent;
+	color:#404040;
+}
+
+.search .button {
+    border:none;
+    background:url(/etc/designs/hybris-demo/images/page/search-button.png) no-repeat;
+    cursor: pointer;
+	position: absolute;
+	right: 10px;
+    top: 2px;
+    font-size: 0;
+    height:16px;
+    width:16px;
+}

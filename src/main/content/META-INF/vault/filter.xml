@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/hybris-demo"/>
+    <filter root="/content/dam/hybris-demo"/>
+    <filter root="/apps/sightly-personalization"/>
+    <filter root="/etc/designs/hybris-demo"/>
+    <filter root="/content/hybris-demo"/>
+</workspaceFilter>

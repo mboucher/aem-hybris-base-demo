@@ -1,0 +1,25 @@
+<div
+    data-sly-use.personalization="/apps/sightly-personalization/sightly/templates/personalization.html"
+    data-sly-unwrap>
+    <!-- output the givenName property from the profile store -->
+    <ul>
+        <li class="user">
+            <div data-sly-call="${personalization.profileProperty @ propertyName='formattedName', store='profile', prefix='(',suffix=')'}" 
+             data-sly-unwrap/>
+        </li>
+
+        <!-- output a link to the profile -->
+        <li class="accountpage">
+            <div data-sly-call="${personalization.profileLink @ id='myprofile-link', displayValue='My Profile', href='${profile.path}.form.html', store='profile'}"
+                 data-sly-unwrap/>
+        </li>
+
+        <!-- output the hovercart component -->
+        <li class="cartpage">
+            <div data-sly-resource="${@path='hovercart', resourceType='commerce/components/hovercart'}"/>
+        </li>
+        <li class="search">
+            <div data-sly-include="search/search.html"></div>
+        </li>
+    </ul>
+</div>

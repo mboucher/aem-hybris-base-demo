@@ -1,0 +1,14 @@
+/* Main site level styles */
+body {
+    font-family: Myriad, Lucida Grande, Lucida Sans Unicode, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    color: #1E1E1E;
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;;
+	height:100%;
+}
+.page-content {
+    background-color: #fff;
+    padding:10px;
+	padding-bottom:80px;   /* Height of the footer element */
+}
